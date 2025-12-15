@@ -22,6 +22,7 @@ This game guides users through a series of questions and real-life-inspired scen
 ### 1. Welcome Screen
 - Title: "Ready to Foster?"
 - Clear explanation of the game's purpose
+- Visual peek preview of what's to come
 - Start button to begin the assessment
 
 ### 2. Question Phase (6 Questions)
@@ -40,6 +41,11 @@ Users answer questions about their lifestyle and preferences:
 - Helps users make informed decisions and understand foster care needs
 - Click the "Back to Question" badge to return
   // The transition between the two screens could be smoother.
+- Rotating badge in corner of each question
+- Click to reveal educational content about why each question is important
+- Smooth animated transition to orange background with detailed explanations
+- Helps users make informed decisions and understand foster care needs
+- Click "Back to Question" badge to return
 
 ### 3. Scenario Phase (3 Real-Life Situations)
 Users face realistic fostering challenges:
@@ -54,6 +60,10 @@ Users face realistic fostering challenges:
 
 **Scenario 3: Socialization Opportunity**
 - Neighborhood BBQ invitation with a young puppy
+- Evaluates ability to handle normal puppy behavior constructively
+
+**Scenario 3: Socialization Opportunity**
+- Neighborhood BBQ invitation with young puppy
 - Assesses judgment about appropriate socialization timing and safety
 
 **Feedback System:**
@@ -61,6 +71,7 @@ Users face realistic fostering challenges:
 - Educational explanations for all choices
 - Helps users learn regardless of their selection
 - Continue button advances to the next scenario
+- Continue button advances to next scenario
 
 ### 4. Results Screen (3 Possible Outcomes)
 
@@ -69,6 +80,7 @@ Based on a 30-point scoring system:
 #### "You're foster-ready!" (24+ points / 80%+)
 - **Visual**: Yellow background with orange text
 - **Display**: Rewards badges showing achievements
+- **Display**: Animated rewards badges showing achievements
 - **Message**: Celebrates user's readiness and patience
 - **Call-to-Action**: Large "Find your foster match!" button
 
@@ -115,6 +127,7 @@ Based on a 30-point scoring system:
 - Resources for when circumstances change
 - Option to sign up for foster readiness updates
 - Links to virtual volunteering (social media support, grant writing, graphic design)
+- "Check back later" reminder with email notification option
 
 ## Scoring System
 
@@ -270,6 +283,102 @@ The game balances **honesty with encouragement**:
 - Recognizes that "not now" doesn't mean "never"
 - Emphasizes that every contribution helps (fostering, volunteering, donations)
 
+
+### Canvas Size
+1440 × 1024 pixels
+
+### Color Palette
+- **Orange**: rgb(235, 100, 36) - Primary brand color
+- **Pink**: rgb(255, 182, 193) - Question screens
+- **Yellow-Green**: rgb(221, 223, 95) - Accent and results
+- **Teal**: rgb(110, 200, 195) - Interactive buttons
+- **Dark Navy**: rgb(20, 30, 60) - Scenario backgrounds
+
+## Game Flow
+
+```
+MENU
+  ↓ (Click START)
+QUESTIONS (6 questions)
+  ↓ (Each question can show "Why matters?" info)
+SCENARIOS (3 situations)
+  ↓ (Feedback after each choice)
+RESULTS
+  ↓ (Find foster match / Get preparation tips / Alternative ways to help)
+```
+
+## Key Interactions
+
+### Rotating Badge System
+- Orange "Why does this matter?" badge rotates continuously
+- Click triggers smooth circular wipe animation from badge position
+- Content fades in as animation progresses
+- Pink "Back to Question" badge appears with same rotation
+- Click triggers reverse animation back to question
+
+### Button Hover States
+- All buttons change color on hover for clear affordance
+- Custom cursor changes to hand pointer over clickable badges
+- Provides immediate visual feedback for interactive elements
+
+### Responsive Feedback
+- Custom illustrations appear for optimal scenario choices
+- Educational explanations for all choices
+- Continuous learning opportunity regardless of selection
+
+## Educational Goals
+
+1. **Inform realistic expectations** about foster care demands
+2. **Highlight urgent needs** (e.g., neonatal kittens, large dogs)
+3. **Teach proper responses** to common fostering situations
+4. **Reduce returns** by ensuring preparedness
+5. **Guide users** to appropriate involvement levels
+6. **Connect people** to shelter resources and support
+
+## Future Enhancements
+
+### Immediate Development Needs
+
+1. **Results Screen Actions**
+   - Implement "Find your foster match!" button functionality
+   - Create recommendation engine based on user answers
+   - Link to real shelter foster programs in user's area
+   - Generate personalized PDF with quiz results and recommendations
+
+2. **Alternative Pathway Screens**
+   - "Almost there" screen: Interactive preparation checklist
+   - "Not yet" screen: Browse volunteer/donation options
+   - Email capture for follow-up resources
+   - Social share buttons to spread awareness
+
+3. **Resource Integration**
+   - Database of local shelters and foster programs
+   - API integration with Petfinder or shelter management systems
+   - Real-time availability of foster-needed animals
+   - Calendar integration for volunteer shifts
+
+### Enhanced Features
+
+- **Progress saving**: Allow users to return and continue
+- **Retake option**: Try quiz again after preparation
+- **Share results**: Social media integration
+- **Print option**: PDF summary of readiness and recommendations
+- **Multilingual support**: Reach broader audience
+- **Mobile optimization**: Touch-friendly responsive design
+- **Analytics**: Track which questions/scenarios are most educational
+- **Additional scenarios**: Expand scenario library based on real foster experiences
+- **Foster stories**: Testimonials from successful fosters
+- **Cost calculator**: Estimate time and resource commitment
+
+## Design Philosophy
+
+The game balances **honesty with encouragement**:
+- Doesn't sugarcoat the challenges of fostering
+- Celebrates all levels of animal welfare involvement
+- Provides educational value even for those not ready to foster
+- Recognizes that "not now" doesn't mean "never"
+- Emphasizes that every contribution helps (fostering, volunteering, donations)
+
 ## Target Audience
 
 - Potential first-time foster parents
@@ -321,5 +430,22 @@ This project was developed with AI assistance (Claude) to help with specific cod
 - Final customizations and refinements
   
 Once the foundational code structure was in place, it became easier to understand how different parts connected and make our own modifications. AI was used as a learning tool to understand p5.js patterns and double-check our implementations.
+---
 
+## Development Notes
 
+This project was developed with AI assistance (Claude) to help with specific coding challenges:
+
+**AI was used for:**
+- Setting up initial code structure and interaction systems
+- Locating where to make custom changes (colors, font sizes, positioning)
+- Implementing specific interactive features (rotating badges, animations, hover states)
+- Troubleshooting and validating code changes
+
+**We handled independently:**
+- All design decisions and visual assets
+- Game content (questions, scenarios, feedback text)
+- Adding preloaded images and draw functions once the base was established
+- Final customizations and refinements
+
+Once the foundational code structure was in place, it became easier to understand how different parts connected and make our own modifications. AI was used as a learning tool to understand p5.js patterns and double-check our implementations.
